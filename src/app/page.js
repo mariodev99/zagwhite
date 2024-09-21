@@ -3,7 +3,8 @@ import { Logo } from "./components/icons";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen p-8 pb-20  sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex items-center justify-center min-h-screen p-8 pb-20  sm:p-20 font-[family-name:var(--font-geist-sans)] relative bg-background">
+      {/* <Image src={background} alt="background" /> */}
       <main className="flex flex-col items-center">
         <h1 className="bg-gradient-to-r from-[#f4f4f4]  via-white to-[#BDBDBD] inline-block text-transparent bg-clip-text text-center text-2xl md:text-8xl font-semibold ">
           Diseñamos experiencias <br /> Impulsamos marcas

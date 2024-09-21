@@ -78,8 +78,8 @@ export default function StartAnimation() {
               fill="#FE491F"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M65.4545 71.2363L74.9454 44.9454H79.2L88.9091 71.2363H84.6545C82.5818 64.4727 72 64.3636 69.6 71.2363H65.4545ZM81.4909 62.0727L77.0727 50.6182L72.8727 62.0727H81.4909Z"
               fill="#FE491F"
             />
