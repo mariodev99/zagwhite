@@ -105,7 +105,8 @@ export default function Nav() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 4 }}
+        transition={{ delay: 4.5 }}
+        // delay animation end
         className="fixed bg-gradient-to-t top-0 flex justify-between items-center px-5 md:px-10 py-5 z-30 w-full"
       >
         <Logo width={"50px"} height={"50px"} />
