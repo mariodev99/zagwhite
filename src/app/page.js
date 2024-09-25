@@ -613,9 +613,9 @@ export default function Home() {
           </svg>
 
           {/* pre / post */}
-          <div className="mt-10 ml-3 flex justify-center gap-4 md:gap-32 text-xs md:text-lg">
-            <div className="px-3 md:px-6 py-2 md:py-3 uppercase rounded-full flex items-center gap-4 border">
-              <div className="h-3 w-3 rounded-full bg-gray-200"></div>
+          <div className="mt-10 ml-3 flex justify-center gap-4 md:gap-32 text-[10px] sm:text-sm md:text-lg">
+            <div className="px-3 md:px-6 py-2 md:py-3 uppercase rounded-full flex items-center gap-4 border border-gray-primary text-gray-primary">
+              <div className="h-3 w-3 rounded-full bg-gray-primary"></div>
               <p className="">pre zag digital</p>
             </div>
             <div className="px-3 md:px-6 py-2 md:py-3  uppercase rounded-full flex items-center gap-2 border border-primary text-primary">
@@ -626,28 +626,38 @@ export default function Home() {
           </div>
 
           {/* resultados */}
-          <div className="grid grid-cols-1 md:grid-cols-2 w-full px-10 md:px-24 lg:px-72 gap-8 mt-16 text-lg md:text-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full px-10 md:px-24 lg:px-72 gap-8 mt-16 text-lg md:text-xl text-gray-primary">
             <div>
               <p>
-                Aumenta tu visibilidad al conectar con tu audiencia ideal de
-                forma efectiva.
+                <span className="font-semibold text-white">
+                  Aumenta tu visibilidad{" "}
+                </span>
+                al conectar con tu audiencia ideal de forma efectiva.
               </p>
             </div>
             <div>
               <p>
-                Multiplica tus conversiones al optimizar las estrategias
-                publicitarias.
+                <span className="font-semibold text-white">
+                  Multiplica tus conversiones{" "}
+                </span>
+                al optimizar las estrategias publicitarias.
               </p>
             </div>
             <div>
               <p>
-                Mejora el engagement con contenido diseñado para generar
-                interacción genuina y efectiva.
+                <span className="font-semibold text-white">
+                  Mejora el engagement{" "}
+                </span>
+                con contenido diseñado para generar interacción genuina y
+                efectiva.
               </p>
             </div>
             <div>
               <p>
-                Maximiza tu ROI invirtiendo en campañas precisas y creativas.
+                <span className="font-semibold text-white">
+                  Maximiza tu ROI{" "}
+                </span>
+                invirtiendo en campañas precisas y creativas.
               </p>
             </div>
           </div>

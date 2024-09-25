@@ -12,9 +12,15 @@ module.exports = {
         foreground: "var(--foreground)",
         primary: "#FE491F",
         secondary: "#303030",
+        gray: {
+          primary: "#b1b1b1",
+        },
       },
       backgroundImage: {
         background: "url('../public/images/background.jpg')",
+      },
+      screens: {
+        xs: "400px",
       },
     },
   },
