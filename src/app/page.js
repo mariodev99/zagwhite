@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import Slider from "./components/common/Slider";
 import PrimaryButton from "./components/common/PrimaryButton";
+import SectionTitle from "./components/common/SectionTitle";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -109,9 +110,7 @@ export default function Home() {
         <Slider />
       </div>
       <section className="px-5 md:px-20 my-28" id="results">
-        <h2 className="text-2xl md:text-6xl font-semibold">
-          Impulsa tu crecimiento
-        </h2>
+        <SectionTitle text={"Impulsa tu crecimiento"} />
         <h4 className="text-lg md:text-2xl mt-3">
           Resultados tangibles que transforman tu negocio
         </h4>
@@ -662,6 +661,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="px-5 md:px-20 my-28">
+        <SectionTitle text={"Estrategia. Produccion. Marketing."} />
       </section>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </main>
