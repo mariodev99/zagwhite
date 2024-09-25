@@ -112,8 +112,9 @@ export default function Nav() {
       >
         <Logo width={"50px"} height={"50px"} />
         <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-lg font-semibold text-gray-200 ">
-          <Link href={"/Nosotros"}>Nosotros</Link>
-          <Link href={"/Metodologia"}>Metodologia</Link>
+          <Link href={"/nosotros"}>Nosotros</Link>
+          <Link href={"/servicios"}>Servicios</Link>
+          <Link href={"/metodos"}>Metodos</Link>
         </div>
         <button className="hidden md:block font-semibold px-4 py-2 bg-gradient-to-r from-[#F63C11] via-[#FF4E25] to-[#FE491F] rounded-full text-xl">
           Contactar

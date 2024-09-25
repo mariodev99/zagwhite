@@ -93,7 +93,17 @@ export default function Home() {
           >
             La solución que necesitas para impulsar tus proyectos a otro nivel
           </motion.p>
-          <PrimaryButton text={"Contactar"} />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: ANIMATION_DELAY + 0.7,
+              duration: 1,
+              ease: "easeInOut",
+            }}
+          >
+            <PrimaryButton text={"Contactar"} />
+          </motion.div>
         </section>
 
         <Slider />
@@ -632,7 +642,7 @@ export default function Home() {
             <div>
               <p>
                 Mejora el engagement con contenido diseñado para generar
-                interacción genuina.efectiva.
+                interacción genuina y efectiva.
               </p>
             </div>
             <div>
