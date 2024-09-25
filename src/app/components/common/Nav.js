@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Logo } from "../icons";
+import PrimaryButton from "./PrimaryButton";
 
 const menuItemVariant = {
   hidden: {
@@ -102,7 +103,7 @@ export default function Nav() {
     <>
       {/* Menu: esta afuera para que tenga un contenedor padre con un height determinado: Layout: h-screen */}
       <AnimatePresence>{open && <Menu />} </AnimatePresence>
-      <motion.div
+      <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 4.5 }}
@@ -110,13 +111,20 @@ export default function Nav() {
         className="fixed bg-gradient-to-t top-0 flex justify-between items-center px-5 md:px-10 py-5 z-30 w-full"
       >
         <Logo width={"50px"} height={"50px"} />
+        <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-lg font-semibold text-gray-200 ">
+          <Link href={"/Nosotros"}>Nosotros</Link>
+          <Link href={"/Metodologia"}>Metodologia</Link>
+        </div>
+        <button className="hidden md:block font-semibold px-4 py-2 bg-gradient-to-r from-[#F63C11] via-[#FF4E25] to-[#FE491F] rounded-full text-xl">
+          Contactar
+        </button>
         <button
-          className="uppercase font-semibold"
+          className="uppercase font-semibold block md:hidden"
           onClick={() => isOpen(!open)}
         >
           menu
         </button>
-      </motion.div>
+      </motion.header>
     </>
   );
 }

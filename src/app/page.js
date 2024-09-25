@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import Slider from "./components/common/Slider";
+import PrimaryButton from "./components/common/PrimaryButton";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -35,12 +36,12 @@ export default function Home() {
   }, [scrollYMotionValue]);
 
   return (
-    <div className=" h-screen w-screen overflow-y-scroll font-[family-name:var(--font-geist-sans)] relative bg-background bg-cover">
-      <main
+    <main className=" h-screen w-screen overflow-y-scroll font-[family-name:var(--font-geist-sans)] relative bg-background bg-cover">
+      <div
         className="flex flex-col items-center px-0 w-full mt-56"
         ref={containerRef}
       >
-        <div className="px-5 flex flex-col items-center justify-center">
+        <section className="px-5 flex flex-col items-center justify-center mb-12">
           <motion.div
             className="overflow-hidden rounded-full px-6 py-1 text-sm md:text-xl lg:text-2xl bg-[#0E0E0E] border-t border-t-[#1e1e1e] mb-1 md:mb-0"
             initial={{ scaleX: 0 }}
@@ -80,7 +81,7 @@ export default function Home() {
             Impulsamos marcas
           </motion.h1>
 
-          <motion.h2
+          <motion.p
             className=" text-sm md:text-2xl font-regular mt-4 mb-8 text-center leading-relaxed"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,29 +92,26 @@ export default function Home() {
             }}
           >
             La solución que necesitas para impulsar tus proyectos a otro nivel
-            {/* <span className="bg-white text-primary px-4 py-1 rounded-full">
-              nivel!
-            </span> */}
-          </motion.h2>
-          <button className="mt-6 mb-24 font-semibold px-6 py-3 bg-gradient-to-r from-[#F63C11] via-[#FF4E25] to-[#FE491F] rounded-full text-2xl">
-            Contactar
-          </button>
-        </div>
+          </motion.p>
+          <PrimaryButton text={"Contactar"} />
+        </section>
 
         <Slider />
-      </main>
-      <section className="px-5 md:px-20 my-28">
-        <h2 className="text-xl md:text-6xl font-medium">
-          Impulsa tu Crecimiento
+      </div>
+      <section className="px-5 md:px-20 my-28" id="results">
+        <h2 className="text-2xl md:text-6xl font-semibold">
+          Impulsa tu crecimiento
         </h2>
-        <h4>Resultados tangibles que transforman tu negocio</h4>
-        <div className=" w-full flex justify-center">
+        <h4 className="text-lg md:text-2xl mt-3">
+          Resultados tangibles que transforman tu negocio
+        </h4>
+        <div className=" w-full flex flex-col items-center mt-6 md:mt-14">
+          {/* grafico */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="1000"
-            height="455"
             viewBox="0 0 1000 455"
             fill="none"
+            className="w-full h-64 md:h-96"
           >
             <line
               x1="8.62891"
@@ -603,36 +601,49 @@ export default function Home() {
               </linearGradient>
             </defs>
           </svg>
-        </div>
-        <div>
-          <div>pre zag digital</div>
-          <div>post zag digital</div>
-        </div>
-        <div>
-          <div>
-            <p>
-              Aumenta tu visibilidad al conectar con tu audiencia ideal de forma
-              efectiva.
-            </p>
+
+          {/* pre / post */}
+          <div className="mt-10 ml-3 flex justify-center gap-4 md:gap-32 text-xs md:text-lg">
+            <div className="px-3 md:px-6 py-2 md:py-3 uppercase rounded-full flex items-center gap-4 border">
+              <div className="h-3 w-3 rounded-full bg-gray-200"></div>
+              <p className="">pre zag digital</p>
+            </div>
+            <div className="px-3 md:px-6 py-2 md:py-3  uppercase rounded-full flex items-center gap-2 border border-primary text-primary">
+              <div className="h-3 w-3 rounded-full bg-primary"></div>
+              <div className="h-3 w-3 rounded-full bg-[#08a1e3]"></div>
+              <p className="ml-2 md:ml-4">post zag digital</p>
+            </div>
           </div>
-          <div>
-            <p>
-              Multiplica tus conversiones al optimizar las estrategias
-              publicitarias.
-            </p>
-          </div>
-          <div>
-            <p>
-              Mejora el engagement con contenido diseñado para generar
-              interacción genuina.efectiva.
-            </p>
-          </div>
-          <div>
-            <p>Maximiza tu ROI invirtiendo en campañas precisas y creativas.</p>
+
+          {/* resultados */}
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full px-10 md:px-24 lg:px-72 gap-8 mt-16 text-lg md:text-xl">
+            <div>
+              <p>
+                Aumenta tu visibilidad al conectar con tu audiencia ideal de
+                forma efectiva.
+              </p>
+            </div>
+            <div>
+              <p>
+                Multiplica tus conversiones al optimizar las estrategias
+                publicitarias.
+              </p>
+            </div>
+            <div>
+              <p>
+                Mejora el engagement con contenido diseñado para generar
+                interacción genuina.efectiva.
+              </p>
+            </div>
+            <div>
+              <p>
+                Maximiza tu ROI invirtiendo en campañas precisas y creativas.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
-    </div>
+    </main>
   );
 }
