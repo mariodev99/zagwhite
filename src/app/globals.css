@@ -25,3 +25,36 @@ body {
     text-wrap: balance;
   }
 }
+
+/* custom height para componente ScrollSliderImages */
+.custom-height div:nth-child(1) {
+  @apply h-40 w-80;
+}
+
+.custom-height div:nth-child(2) {
+  @apply h-96 w-96;
+}
+
+.custom-height div:nth-child(3) {
+  @apply h-32 w-96;
+}
+
+.custom-height div:nth-child(4) {
+  @apply h-96 w-80;
+}
+
+.custom-height div:nth-child(5) {
+  @apply h-96 w-80;
+}
+
+.custom-height div:nth-child(6) {
+  @apply h-96 w-80;
+}
+
+.custom-height div:nth-child(7) {
+  @apply h-96 w-80;
+}
+
+.custom-height div:nth-child(8) {
+  @apply h-96 w-80;
+}

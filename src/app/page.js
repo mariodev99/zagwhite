@@ -5,6 +5,7 @@ import { motion, useMotionValue } from "framer-motion";
 import Slider from "./components/common/Slider";
 import PrimaryButton from "./components/common/PrimaryButton";
 import SectionTitle from "./components/common/SectionTitle";
+import { ScrollSliderImages } from "./components/common/ScrollSliderImages";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -21,6 +22,7 @@ export default function Home() {
         const scrollTop = container.scrollTop;
         if (scrollYMotionValue) {
           scrollYMotionValue.set(scrollTop);
+          console.log(scrollTop);
         }
       }
     };
@@ -37,11 +39,11 @@ export default function Home() {
   }, [scrollYMotionValue]);
 
   return (
-    <main className=" h-screen w-screen overflow-y-scroll font-[family-name:var(--font-geist-sans)] relative bg-background bg-cover">
-      <div
-        className="flex flex-col items-center px-0 w-full mt-56"
-        ref={containerRef}
-      >
+    <main
+      className=" h-screen w-screen overflow-y-scroll font-[family-name:var(--font-geist-sans)] relative bg-background bg-cover"
+      ref={containerRef}
+    >
+      <div className="flex flex-col items-center px-0 w-full mt-56">
         <section className="px-5 flex flex-col items-center justify-center mb-12">
           <motion.div
             className="overflow-hidden rounded-full px-6 py-1 text-sm md:text-xl lg:text-2xl bg-[#0E0E0E] border-t border-t-[#1e1e1e] mb-1 md:mb-0"
@@ -664,8 +666,21 @@ export default function Home() {
       </section>
 
       <section className="px-5 md:px-20 my-28">
-        <SectionTitle text={"Estrategia. Produccion. Marketing."} />
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
+          <SectionTitle text={"Estrategia. Produccion. Marketing."} />
+          <div className="mt-2 md:mt-0 pl-0 md:pl-14 h-full text-sm md:text-lg text-gray-primary flex items-center">
+            <p>
+              Diseñamos estrategias en base a la definición del público ideal;
+              los objetivos comerciales ; el mensaje a transmitir y la
+              optimización de los recursos disponibles para cada proyecto.
+            </p>
+          </div>
+        </div>
       </section>
+      <div className=" w-full">
+        <ScrollSliderImages currentScroll={scrollYMotionValue} />
+      </div>
+      <div className="h-96"></div>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </main>
   );
