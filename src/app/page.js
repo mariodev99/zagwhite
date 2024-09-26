@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <main
-      className=" h-screen w-screen overflow-y-scroll font-[family-name:var(--font-geist-sans)] relative bg-background bg-cover"
+      className=" h-screen w-screen overflow-y-scroll overflow-x-hidden font-[family-name:var(--font-geist-sans)] relative bg-background bg-cover"
       ref={containerRef}
     >
       <div className="flex flex-col items-center px-0 w-full mt-56">
