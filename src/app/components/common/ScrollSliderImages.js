@@ -6,12 +6,16 @@ import service_4 from "../../../public/images/service_4.jpg";
 import Image from "next/image";
 
 const imagesList = [
-  { src: service_1 },
   { src: service_2 },
+  { src: service_1 },
   { src: service_3 },
   { src: service_4 },
-  { src: service_1 },
   { src: service_2 },
+  { src: service_1 },
+  { src: service_3 },
+  { src: service_4 },
+  { src: service_2 },
+  { src: service_1 },
   { src: service_3 },
   { src: service_4 },
 ];
@@ -19,7 +23,7 @@ const imagesList = [
 export const ScrollSliderImages = ({ currentScroll }) => {
   // const {scrollY} = useScroll()
 
-  const toRight = useTransform(currentScroll, [1000, 2500], [-1500, 200]);
+  const toRight = useTransform(currentScroll, [1000, 2500], [-1500, 0]);
   //   const toLeft = useTransform(currentScroll, [0, 2000], [0, -250]);
 
   return (
