@@ -7,6 +7,14 @@ import PrimaryButton from "./components/common/PrimaryButton";
 import SectionTitle from "./components/common/SectionTitle";
 import { ScrollSliderImages } from "./components/common/ScrollSliderImages";
 import Graphics from "./components/common/Graphics";
+import {
+  AudiovisualIcon,
+  BrandingIcon,
+  CashIcon,
+  CmIcon,
+  DesignIcon,
+  MetaIcon,
+} from "./components/icons";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -38,6 +46,45 @@ export default function Home() {
       }
     };
   }, [scrollYMotionValue]);
+
+  const services = [
+    {
+      icon: <BrandingIcon />,
+      title: "Branding",
+      description:
+        "Ideamos y diseñamos tu marca de forma estrategica para que tu publico objetivo sienta una conexion",
+    },
+    {
+      icon: <DesignIcon />,
+      title: "Diseño Gráfico",
+      description:
+        "Ideamos y diseñamos tu marca de forma estrategica para que tu publico objetivo sienta una conexion",
+    },
+    {
+      icon: <MetaIcon />,
+      title: "Meta ADS",
+      description:
+        "Ideamos y diseñamos tu marca de forma estrategica para que tu publico objetivo sienta una conexion",
+    },
+    {
+      icon: <CmIcon />,
+      title: "Community Management",
+      description:
+        "Ideamos y diseñamos tu marca de forma estrategica para que tu publico objetivo sienta una conexion",
+    },
+    {
+      icon: <AudiovisualIcon />,
+      title: "Contenido Audiovisual",
+      description:
+        "Ideamos y diseñamos tu marca de forma estrategica para que tu publico objetivo sienta una conexion",
+    },
+    {
+      icon: <CashIcon />,
+      title: "Asesoramiento Comercial",
+      description:
+        "Ideamos y diseñamos tu marca de forma estrategica para que tu publico objetivo sienta una conexion",
+    },
+  ];
 
   return (
     <main
@@ -133,7 +180,7 @@ export default function Home() {
               <div className="h-3 w-3 rounded-full bg-gray-primary"></div>
               <p className="">pre zag digital</p>
             </div>
-            <div className="px-3 md:px-6 py-2 md:py-3  uppercase rounded-full flex items-center gap-2 border border-primary text-primary">
+            <div className="px-3 md:px-6 py-2 md:py-3 uppercase rounded-full flex items-center gap-2 border border-primary text-primary">
               <div className="h-3 w-3 rounded-full bg-primary"></div>
               <div className="h-3 w-3 rounded-full bg-[#08a1e3]"></div>
               <p className="ml-2 md:ml-4">post zag digital</p>
@@ -200,7 +247,15 @@ export default function Home() {
       <div className=" w-full">
         <ScrollSliderImages currentScroll={scrollYMotionValue} />
       </div>
-      <div className="h-96"></div>
+      <div className="px-5 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-10 my-32">
+        {services.map(({ title, icon, description }) => (
+          <div key={title} className="pr-10">
+            {icon}
+            <h4 className="text-2xl font-semibold mt-1">{title}</h4>
+            <p className="text-lg font-medium mt-2">{description}</p>
+          </div>
+        ))}
+      </div>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </main>
   );
