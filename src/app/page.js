@@ -71,7 +71,7 @@ export default function Home() {
           </motion.div>
 
           <motion.h1
-            className=" bg-gradient-to-r from-[#f4f4f4]  via-white to-[#BDBDBD] inline-block text-transparent bg-clip-text text-center text-2xl md:text-5xl lg:text-8xl font-semibold "
+            className=" bg-gradient-to-r from-[#f4f4f4] via-white to-[#BDBDBD] inline-block text-transparent bg-clip-text text-center text-2xl md:text-5xl lg:text-8xl font-semibold "
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

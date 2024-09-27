@@ -74,3 +74,8 @@ body {
 .custom-height div:nth-child(12) {
   @apply h-72 w-72;
 }
+
+.textgradient {
+  @apply bg-gradient-to-r from-[#f4f4f4] via-white to-[#BDBDBD] inline-block text-transparent bg-clip-text text-center;
+
+}
