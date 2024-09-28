@@ -251,8 +251,8 @@ export default function Home() {
         {services.map(({ title, icon, description }) => (
           <div key={title} className="pr-10">
             {icon}
-            <h4 className="text-2xl font-semibold mt-1">{title}</h4>
-            <p className="text-lg font-medium mt-2">{description}</p>
+            <h4 className="text-lg md:text-2xl font-semibold mt-1">{title}</h4>
+            <p className="text-sm md:text-lg font-medium mt-2">{description}</p>
           </div>
         ))}
       </div>

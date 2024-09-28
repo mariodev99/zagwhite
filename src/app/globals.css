@@ -28,51 +28,51 @@ body {
 
 /* custom height para componente ScrollSliderImages */
 .custom-height div:nth-child(1) {
-  @apply h-40 w-64;
+  @apply h-20 md:h-40 w-32 md:w-64;
 }
 
 .custom-height div:nth-child(2) {
-  @apply h-64 w-32;
+  @apply h-32 md:h-64 w-16 md:w-32;
 }
 
 .custom-height div:nth-child(3) {
-  @apply h-40 w-52;
+  @apply h-20 md:h-40 w-24 md:w-52;
 }
 
 .custom-height div:nth-child(4) {
-  @apply h-72 w-72;
+  @apply h-36 md:h-72 h-36 md:w-72;
 }
 
 .custom-height div:nth-child(5) {
-  @apply h-40 w-64;
+  @apply h-20 md:h-40 w-32 md:w-64;
 }
 
 .custom-height div:nth-child(6) {
-  @apply h-64 w-32;
+  @apply h-32 md:h-64 w-16 md:w-32;
 }
 
 .custom-height div:nth-child(7) {
-  @apply h-40 w-52;
+  @apply h-20 md:h-40 w-24 md:w-52;
 }
 
 .custom-height div:nth-child(8) {
-  @apply h-72 w-72;
+  @apply h-36 md:h-72 h-36 md:w-72;
 }
 
 .custom-height div:nth-child(9) {
-  @apply h-40 w-64;
+  @apply h-20 md:h-40 w-32 md:w-64;
 }
 
 .custom-height div:nth-child(10) {
-  @apply h-64 w-32;
+  @apply h-32 md:h-64 w-16 md:w-32;
 }
 
 .custom-height div:nth-child(11) {
-  @apply h-40 w-52;
+  @apply h-20 md:h-40 w-24 md:w-52;
 }
 
 .custom-height div:nth-child(12) {
-  @apply h-72 w-72;
+  @apply h-36 md:h-72 h-36 md:w-72;
 }
 
 .textgradient {
