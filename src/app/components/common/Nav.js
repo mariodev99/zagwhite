@@ -7,7 +7,7 @@ import Link from "next/link";
 // } from "./icons";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CloseIcon, Logo, MenuIcon } from "../icons";
+import { CloseIcon, CompleteLogo, Logo, MenuIcon } from "../icons";
 import PrimaryButton from "./PrimaryButton";
 
 const menuItemVariant = {
@@ -48,9 +48,9 @@ export default function Nav() {
           transition={{ duration: 0.8 }}
         >
           <div className="flex flex-col pl-10 pr-10 h-full ">
-            <div className="flex justify-between overflow-hidden">
+            <div className="flex justify-between">
               <Link href={"/"} onClick={(e) => handleClick(e, "/")}>
-                <Logo height={"50px"} width={"60px"} />
+                <CompleteLogo height={"50px"} width={"60px"} />
               </Link>
               <motion.button
                 initial={{ y: 30 }}
@@ -130,15 +130,6 @@ export default function Nav() {
           </div>
         </motion.div>
       </div>
-
-      {/* contenedor que da sombra al resto de la pagina */}
-      {/* <motion.div
-        className=" absolute right-0 bg-black bg-opacity-70 top-0 w-screen h-full z-40 flex justify-end overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      /> */}
     </>
   );
 
@@ -153,7 +144,7 @@ export default function Nav() {
         className="fixed bg-gradient-to-t top-0 flex justify-between items-center px-5 md:px-10 py-5 z-30 w-full"
       >
         <Logo width={"50px"} height={"50px"} />
-        <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-lg font-semibold text-gray-200 ">
+        <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium text-gray-300 ">
           <Link href={"/nosotros"}>Nosotros</Link>
           <Link href={"/servicios"}>Servicios</Link>
           <Link href={"/metodos"}>Metodos</Link>
