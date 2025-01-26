@@ -60,7 +60,7 @@ export const MenuIcon = () => (
   >
     <path
       d="M4 8H20M4 16H20"
-      stroke="white"
+      stroke="#000"
       strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -78,7 +78,7 @@ export const CloseIcon = () => (
   >
     <path
       d="M18 6L6 18M6 6L18 18"
-      stroke="white"
+      stroke="#fff"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

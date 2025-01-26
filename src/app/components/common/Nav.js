@@ -141,8 +141,9 @@ export default function Nav() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 5 }}
-        className="fixed bg-gradient-to-t top-0 flex justify-between items-center px-5 md:px-10 py-5 z-30 w-full"
+        className="fixed bg-gradient-to-t top-0  px-5 md:px-10 py-5 z-30 w-full  bg-white"
       >
+        <div className="flex justify-between items-center border border-gray-100 rounded-full p-3 pr-6 relative z-50">
         <Logo width={"50px"} height={"50px"} />
         <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium text-gray-300 ">
           <Link href={"/nosotros"}>Nosotros</Link>
@@ -158,6 +159,9 @@ export default function Nav() {
         >
           <MenuIcon />
         </button>
+                  
+        </div>
+
       </motion.header>
     </>
   );
