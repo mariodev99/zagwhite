@@ -143,25 +143,23 @@ export default function Nav() {
         transition={{ delay: 5 }}
         className="fixed bg-gradient-to-t top-0  px-5 md:px-10 py-5 z-30 w-full  bg-white"
       >
-        <div className="flex justify-between items-center border border-gray-100 rounded-full p-3 pr-6 relative z-50">
-        <Logo width={"50px"} height={"50px"} />
-        <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium text-gray-300 ">
-          <Link href={"/nosotros"}>Nosotros</Link>
-          <Link href={"/servicios"}>Servicios</Link>
-          <Link href={"/metodos"}>Metodos</Link>
+        <div className="flex justify-between items-center border border-gray-100 rounded-full px-3 py-1 pr-6 relative z-50">
+          <Logo width={"50px"} height={"50px"} />
+          <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium text-gray-300 ">
+            <Link href={"/nosotros"}>Nosotros</Link>
+            <Link href={"/servicios"}>Servicios</Link>
+            <Link href={"/metodos"}>Metodos</Link>
+          </div>
+          <button className="hidden md:block font-semibold px-4 py-2 bg-gradient-to-r from-[#F63C11] via-[#FF4E25] to-[#FE491F] rounded-full text-xl">
+            Contactar
+          </button>
+          <button
+            className="uppercase font-semibold block md:hidden"
+            onClick={() => isOpen(!open)}
+          >
+            <MenuIcon />
+          </button>
         </div>
-        <button className="hidden md:block font-semibold px-4 py-2 bg-gradient-to-r from-[#F63C11] via-[#FF4E25] to-[#FE491F] rounded-full text-xl">
-          Contactar
-        </button>
-        <button
-          className="uppercase font-semibold block md:hidden"
-          onClick={() => isOpen(!open)}
-        >
-          <MenuIcon />
-        </button>
-                  
-        </div>
-
       </motion.header>
     </>
   );
