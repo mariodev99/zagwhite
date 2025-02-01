@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${Oswald.variable}  antialiased text-black`}
       >
         <StartAnimation />
+        <div className="fixed top-0 h-24 z-10 w-full  bg-gradient-to-t from-transparent to-white"></div>{" "}
         <Nav />
         {children}
       </body>
