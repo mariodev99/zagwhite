@@ -92,7 +92,7 @@ export default function Home() {
       ref={containerRef}
     >
       <div className="flex flex-col items-center px-0 w-full mt-56">
-        <section className="px-5 flex flex-col items-center justify-center mb-12">
+        <section className="px-4 flex flex-col items-center justify-center mb-12">
           <motion.div
             className="font-[family-name:var(--font-oswald)] color-black text-center text-5xl md:text-7xl lg:text-8xl font-bold "
             initial={{ opacity: 0, y: 50 }}
