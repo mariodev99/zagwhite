@@ -1,18 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Logo } from "../icons";
+import { Bebas_Neue } from "next/font/google";
 
-const shorttSlides = [
-  { text: "Diseño Gráfico · Branding · Contenido Audiovisual" },
-];
+// If loading a variable font, you don't need to specify the font weight
+const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
-const largeSlides = [
-  { text: "Asesoramiento Comercial  Community  Management MetaADS" },
+const shortSlides = [
+  {
+    text: "Branding",
+  },
+  {
+    text: "Contenido",
+  },
+  {
+    text: "Publicidad",
+  },
+  {
+    text: "Branding",
+  },
+  {
+    text: "Contenido",
+  },
+  {
+    text: "Publicidad",
+  },
 ];
 
 const Slider = () => {
   return (
-    <div className=" overflow-hidden py-8 font-bold uppercase text-sm md:text-3xl text-white">
+    <div
+      className={`overflow-hidden py-10 font-bold uppercase text-sm md:text-4xl text-white ${bebas.className}`}
+    >
       <div className={`relative w-full  py-3 rotate-3 `}>
         {/* Wrapping div for seamless looping */}
         <motion.div
@@ -27,11 +46,11 @@ const Slider = () => {
           }}
         >
           {/* Render duplicated slides */}
-          {[...shorttSlides, ...shorttSlides].map((slide, index) => (
+          {[...shortSlides, ...shortSlides].map((slide, index) => (
             <div
               key={index}
               className="flex-shrink-0 bg-[#101010] py-5 "
-              style={{ width: `${100 / shorttSlides.length}%` }}
+              style={{ width: `${100 / shortSlides.length}%` }}
             >
               <div className="flex items-center justify-center h-full ">
                 {slide.text}

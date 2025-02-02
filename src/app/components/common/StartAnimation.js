@@ -9,7 +9,7 @@ export default function StartAnimation() {
   useEffect(() => {
     setTimeout(() => {
       setEndAnimation(true);
-    }, 3800);
+    }, 3000);
   }, []);
 
   return (
@@ -17,7 +17,7 @@ export default function StartAnimation() {
       className="absolute top-0 h-screen w-screen flex justify-center items-center z-20  bg-primary"
       initial={{ height: "100vh" }}
       animate={{ height: 0 }}
-      transition={{ duration: 0.8, ease: "easeInOut", delay: 4.2 }}
+      transition={{ duration: 0.8, ease: "easeInOut", delay: 3.2 }}
     >
       {/* Logo */}
       <div className="relative z-50 overflow-hidden">
@@ -51,9 +51,9 @@ export default function StartAnimation() {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{
-              duration: 2,
+              duration: 1.2,
               ease: "easeInOut",
-              delay: 0.5,
+              delay: 0.2,
             }}
           />
 
@@ -62,8 +62,8 @@ export default function StartAnimation() {
             clipPath="circle(0% at 50% 50%)"
             animate={{ clipPath: "circle(150% at 50% 50%)" }}
             transition={{
-              duration: 1.2,
-              delay: 3,
+              duration: 1,
+              delay: 2.3,
               ease: "easeInOut",
             }}
           >
@@ -85,8 +85,8 @@ export default function StartAnimation() {
             fill="#FE491F"
             animate={{ r: [0, 80, 0] }} // Expande y luego se contrae
             transition={{
-              duration: 1.2,
-              delay: 2.2,
+              duration: 1,
+              delay: 1.8,
               ease: "easeInOut",
               times: [0, 0.5, 1],
             }}
@@ -98,7 +98,7 @@ export default function StartAnimation() {
         className="absolute top-0 h-full w-full bg-black z-40"
         initial={{ height: "100vh" }}
         animate={{ height: "0px" }}
-        transition={{ duration: 0.6, ease: "easeInOut", delay: 4.1 }}
+        transition={{ duration: 0.6, ease: "easeInOut", delay: 3.1 }}
       />
     </motion.div>
   );

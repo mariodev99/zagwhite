@@ -140,19 +140,22 @@ export default function Nav() {
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 5 }}
+        transition={{ delay: 4 }}
         className="fixed bg-gradient-to-t top-0  px-5 md:px-10 py-5 z-30 w-full "
       >
         <div className="flex justify-between items-center border border-gray-100 rounded-full px-3 py-1 pr-6 relative z-50 bg-white  ">
           <Logo width={"50px"} height={"50px"} />
-          <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium text-gray-300 ">
+          <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium ">
             <Link href={"/nosotros"}>Nosotros</Link>
             <Link href={"/servicios"}>Servicios</Link>
             <Link href={"/metodos"}>Metodos</Link>
           </div>
-          <button className="hidden md:block font-semibold px-4 py-2 bg-gradient-to-r from-[#F63C11] via-[#FF4E25] to-[#FE491F] rounded-full text-xl">
+          <a
+            href="/contacto"
+            className="text-white hidden md:block font-semibold text-semibold px-4 py-2 bg-[#FE491F] rounded-full text-xl"
+          >
             Contactar
-          </button>
+          </a>
           <button
             className="uppercase font-semibold block md:hidden"
             onClick={() => isOpen(!open)}

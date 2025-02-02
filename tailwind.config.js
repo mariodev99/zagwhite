@@ -16,7 +16,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        background: "url('../public/images/background.jpg')",
+        firstbox: "url('../public/images/first_box.jpg')",
       },
       screens: {
         xs: "400px",
