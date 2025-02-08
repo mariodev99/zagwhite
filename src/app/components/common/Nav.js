@@ -39,7 +39,7 @@ export default function Nav() {
   const Menu = () => (
     <>
       {/* menu desplegable*/}
-      <div className="fixed right-0 top-0 h-screen w-screen md:w-[35vw] z-50 flex justify-end">
+      <div className="fixed right-0 top-0 h-screen w-screen md:w-[35vw] z-50 flex justify-end text-white">
         <motion.div
           className="h-full bg-[#0d0d0d] pb-10 pt-5 "
           initial={{ width: "0px" }}
@@ -105,7 +105,7 @@ export default function Nav() {
                   zagdigital@gmail.com
                 </Link>
               </motion.div>
-              <div className="h-px w-full bg-gradient-to-r from-black via-gray-primary to-black "></div>
+              <div className="h-px w-full bg-[#333] "></div>
               <motion.div
                 className="flex flex-col items-center gap-5"
                 initial={{ opacity: 0 }}
@@ -141,23 +141,38 @@ export default function Nav() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 4 }}
-        className="fixed bg-gradient-to-t top-0  px-5 md:px-10 py-5 z-30 w-full "
+        className="fixed bg-gradient-to-t top-0 px-5 md:px-10 py-4 md:py-8 z-30 w-full "
       >
-        <div className="flex justify-between items-center border border-gray-100 rounded-full px-3 py-1 pr-6 relative z-50 bg-white  ">
+        <div className="flex justify-between items-center border border-gray-100 rounded-full p-1 md:p-3 relative z-50 bg-white  ">
           <Logo width={"50px"} height={"50px"} />
           <div className="hidden md:flex items-center justify-center flex-1 gap-4 text-xl font-medium ">
-            <Link href={"/nosotros"}>Nosotros</Link>
-            <Link href={"/servicios"}>Servicios</Link>
-            <Link href={"/metodos"}>Metodos</Link>
+            <Link
+              href={"/nosotros"}
+              className="  p-3 px-5 hover:bg-gray-100 rounded-full"
+            >
+              Nosotros
+            </Link>
+            <Link
+              className="  p-3 px-5 hover:bg-gray-100 rounded-full"
+              href={"/servicios"}
+            >
+              Servicios
+            </Link>
+            <Link
+              className="  p-3 px-5 hover:bg-gray-100 rounded-full"
+              href={"/metodos"}
+            >
+              Metodos
+            </Link>
           </div>
           <a
             href="/contacto"
-            className="text-white hidden md:block font-semibold text-semibold px-4 py-2 bg-[#FE491F] rounded-full text-xl"
+            className="text-white hidden md:block font-medium px-5 py-3 bg-black rounded-full text-lg"
           >
             Contactar
           </a>
           <button
-            className="uppercase font-semibold block md:hidden"
+            className="uppercase font-semibold block md:hidden pr-4"
             onClick={() => isOpen(!open)}
           >
             <MenuIcon />
