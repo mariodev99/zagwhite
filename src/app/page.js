@@ -51,7 +51,7 @@ export default function Home() {
       className=" h-screen w-screen overflow-y-scroll overflow-x-hidden font-[family-name:var(--font-geist-sans )] relative bg-background bg-cover"
       ref={containerRef}
     >
-      <div className="flex flex-col items-center px-0 w-full mt-44 md:mt-56">
+      <div className="flex flex-col items-center w-full mt-44 md:mt-56">
         <section className="px-4 flex flex-col items-center justify-center mb-12">
           <motion.div
             className="font-[family-name:var(--font-oswald)] color-black text-center text-5xl md:text-7xl lg:text-9xl font-bold "
@@ -121,8 +121,8 @@ export default function Home() {
       </div>
       <Slider />
 
-      <section className="px-10 my-8">
-        <h2 className="text-2xl md:text-5xl lg:text-7xl font-medium mb-4 md:mb-10 lg:mb-16">
+      <section className="px-4 my-8">
+        <h2 className="text-3xl md:text-5xl lg:text-7xl font-medium mb-4 md:mb-10 lg:mb-16">
           Resultados que transforman tu negocio
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -132,6 +132,7 @@ export default function Home() {
           <FirstFigure />
           <SecondFigure />
         </div>
+        <div className="h-screen"></div>
       </section>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </main>
