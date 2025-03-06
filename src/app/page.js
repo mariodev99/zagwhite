@@ -14,6 +14,8 @@ import {
   MetaIcon,
   SecondFigure,
 } from "./components/icons";
+import LayoutWrapper from "./components/common/LayoutWrapper";
+import ServicesSection from "./components/ServiceSection";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -121,19 +123,29 @@ export default function Home() {
       </div>
       <Slider />
 
-      <section className="px-4 my-8">
-        <h2 className="text-3xl md:text-5xl lg:text-7xl font-medium mb-4 md:mb-10 lg:mb-16">
-          Resultados que transforman tu negocio
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div className="hidden lg:flex">
-            <div>titulo</div>
+      <LayoutWrapper>
+        <section id="results">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-medium mb-4 md:mb-10 lg:mb-16"></h2>
+          <SectionTitle text={"Resultados que importan  "} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="hidden lg:flex flex-col gap-4   h-full  p-8 ">
+              <div className="text-3xl font-medium">Resultados reales</div>
+              <p className="text-xl mt-2 text-gray-800">
+                Nuestro equipo analiza y optimiza de forma periódica los
+                resultados obtenidos en cada área digital, para asegurar que
+                estén alineados a los objetivos comerciales que se planteen en
+                el proyecto.
+              </p>
+            </div>
+            <FirstFigure />
+            <SecondFigure />
           </div>
-          <FirstFigure />
-          <SecondFigure />
-        </div>
-        <div className="h-screen"></div>
-      </section>
+        </section>
+      </LayoutWrapper>
+
+      <LayoutWrapper>
+        <ServicesSection />
+      </LayoutWrapper>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </main>
   );
