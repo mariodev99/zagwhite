@@ -52,11 +52,9 @@ export default function MethodSection() {
         <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mr-4">
           {icon}
         </div>
-        <span className="text-5xl font-bold text-primary opacity-20">
-          #{index + 1}{" "}
-        </span>
+        <span className="text-5xl font-bold text-gray-200">#{index + 1} </span>
       </div>
-      <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-primary transition-colors">
+      <h3 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
         {title}
       </h3>
       <p className="text-slate-600 border-l-2 border-slate-200 pl-4">
