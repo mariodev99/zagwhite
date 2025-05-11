@@ -16,6 +16,7 @@ import {
 } from "./components/icons";
 import LayoutWrapper from "./components/common/LayoutWrapper";
 import ServicesSection from "./components/ServiceSection";
+import MethodSection from "./components/common/MethodSection";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -126,7 +127,8 @@ export default function Home() {
       <LayoutWrapper>
         <section id="results">
           <h2 className="text-3xl md:text-5xl lg:text-7xl font-medium mb-4 md:mb-10 lg:mb-16"></h2>
-          <SectionTitle text={"Resultados que importan  "} />
+          <SectionTitle>Resultados que importan</SectionTitle>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="hidden lg:flex flex-col gap-4   h-full  p-8 ">
               <div className="text-3xl font-medium">Resultados reales</div>
@@ -145,6 +147,9 @@ export default function Home() {
 
       <LayoutWrapper>
         <ServicesSection />
+      </LayoutWrapper>
+      <LayoutWrapper>
+        <MethodSection />
       </LayoutWrapper>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </main>

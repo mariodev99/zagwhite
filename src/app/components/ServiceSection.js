@@ -63,7 +63,7 @@ export default function ServicesSection() {
           className="flex flex-col items-center"
         >
           <motion.div variants={cardVariants}>
-            <SectionTitle text={"Qué hacemos"} />
+            <SectionTitle>Qué hacemos</SectionTitle>
           </motion.div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
@@ -87,7 +87,7 @@ export default function ServicesSection() {
             ))}
           </div>
 
-          <div className="border w-full relative block md:hidden h-96">
+          <div className="border w-full  hidden h-96">
             <div className="text-2xl md:text-4xl w-auto rounded-full px-4 py-2 bg-gray-100 inline-block absolute top-0 rotate-2">
               Capacitacion
             </div>
