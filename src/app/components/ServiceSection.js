@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Code2, Palette, Rocket } from "lucide-react";
 import SectionTitle from "./common/SectionTitle";
-import FloatingServices from "./FloatingServices";
 
 const services = [
   {
@@ -62,9 +61,7 @@ export default function ServicesSection() {
           variants={containerVariants}
           className="flex flex-col items-center"
         >
-          <motion.div variants={cardVariants}>
-            <SectionTitle>Qué hacemos</SectionTitle>
-          </motion.div>
+          <SectionTitle>Qué hacemos</SectionTitle>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <motion.div

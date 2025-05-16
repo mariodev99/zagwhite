@@ -83,14 +83,11 @@ export default function MethodSection() {
       </section>
 
       {/* ENFOQUE SMART Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 ">
+      {/* <section className="py-20 px-4 md:px-8 lg:px-16 ">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-xl md:text-3xl lg:text-5xl font-semibold mb-4 md:mb-10 lg:mb-16">
-            Nuestro enfoque
-          </h2>
+          <SectionTitle> Nuestro enfoque</SectionTitle>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Smart Approach 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
             <div className="group relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-black transform origin-bottom transition-all duration-300 group-hover:scale-y-110"></div>
               <div className="flex items-center gap-4 mb-6">
@@ -109,7 +106,6 @@ export default function MethodSection() {
               </div>
             </div>
 
-            {/* Smart Approach 2 */}
             <div className="group relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-black transform origin-bottom transition-all duration-300 group-hover:scale-y-110"></div>
               <div className="flex items-center gap-4 mb-6">
@@ -128,7 +124,6 @@ export default function MethodSection() {
               </div>
             </div>
 
-            {/* Smart Approach 3 */}
             <div className="group relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-black transform origin-bottom transition-all duration-300 group-hover:scale-y-110"></div>
               <div className="flex items-center gap-4 mb-6">
@@ -148,7 +143,6 @@ export default function MethodSection() {
               </div>
             </div>
 
-            {/* Smart Approach 4 */}
             <div className="group relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-black transform origin-bottom transition-all duration-300 group-hover:scale-y-110"></div>
               <div className="flex items-center gap-4 mb-6">
@@ -169,7 +163,7 @@ export default function MethodSection() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
