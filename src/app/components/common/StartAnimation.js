@@ -14,7 +14,7 @@ export default function StartAnimation() {
 
   return (
     <motion.div
-      className="absolute top-0 h-screen w-screen flex justify-center items-center z-20  bg-primary"
+      className="absolute top-0 h-[100dvh] md:h-screen w-screen flex justify-center items-center z-20  bg-primary"
       initial={{ height: "100vh" }}
       animate={{ height: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut", delay: 3.2 }}
